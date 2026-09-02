@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리은행 계좌 목록</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #eef3fb;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .account-list {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .account-card {
+            flex: 0 0 calc(25% - 15px);
+            min-width: 220px;
+        }
+
+        article {
+            height: 100%;
+            padding: 24px 20px;
+            background: #ffffff;
+            border: 1px solid #dfe6ef;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(18, 32, 50, 0.08);
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 1.7rem;
+            color: #1b2a41;
+        }
+
+        header p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #4d5d74;
+            flex-wrap: wrap;
+        }
+
+        strong {
+            color: #12263a;
+        }
+
+        main {
+            margin-bottom: 20px;
+        }
+
+        dl {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            background: #f5f8ff;
+            border-radius: 12px;
+        }
+
+        dt {
+            font-weight: 700;
+            color: #1b2a41;
+        }
+
+        dd {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #0f6adf;
+            font-weight: 700;
+        }
+
+        footer {
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+        }
+
+        button {
+            flex: 1 1 0;
+            min-width: 0;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            background: #0f6adf;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .account-card {
+                flex-basis: calc(33.333% - 14px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .account-card {
+                flex-basis: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .account-card {
+                flex-basis: 100%;
+            }
+
+            article {
+                padding: 18px 16px;
+            }
+
+            header p {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            dl {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            footer {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="account-list">
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>110-***-123456</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>1,250,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>112-***-987654</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>850,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>113-***-456789</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>2,430,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>114-***-654321</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>3,120,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>115-***-123789</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>910,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>116-***-456123</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>1,760,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>117-***-789456</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>670,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>118-***-321654</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>2,180,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>119-***-963852</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>540,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>120-***-147258</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>1,980,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>121-***-852369</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>1,140,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+
+        <div class="account-card">
+            <article>
+                <header>
+                    <h1>우리은행</h1>
+                    <p>
+                        <strong>계좌번호</strong>
+                        <span>122-***-741852</span>
+                    </p>
+                </header>
+                <main>
+                    <dl>
+                        <dt>잔액</dt>
+                        <dd>2,760,000원</dd>
+                    </dl>
+                </main>
+                <footer>
+                    <button type="button">이체</button>
+                    <button type="button">상세</button>
+                </footer>
+            </article>
+        </div>
+    </div>
+</body>
+</html>
